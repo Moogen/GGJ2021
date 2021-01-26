@@ -5,6 +5,6 @@ Github repository for Global Game Jam 2021. This game was submitted to the [Seat
 ## Collaborators
 
 - [Jeff Tucker](https://github.com/jeffman323)
-- [Jesica Mo](https://github.com/jessepinwheel)
+- [Jesse Peng](https://github.com/jessepinwheel)
 - [Jon Hu](https://github.com/stitchless)
 - [Josh Wu](https://github.com/moogen)
