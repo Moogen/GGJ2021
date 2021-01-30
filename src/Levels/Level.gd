@@ -1,6 +1,12 @@
 extends Node
 
-export var color = 1
+class_name Level
+
+enum LevelColor {RED, GREEN, BLUE}
+
+export(LevelColor) var color setget set_color
+
+onready var background_tiles: TileMap = $BackgroundTiles
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
