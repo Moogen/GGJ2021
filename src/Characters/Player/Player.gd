@@ -5,6 +5,7 @@ export var jump_height: float = 128
 export var time_to_jump_apex: float = 0.4
 
 onready var graphics: Node2D = $Graphics
+onready var interactable_detector: Area2D = $InteractableDetector
 
 var gravity = 0 
 var jump_force = 0
@@ -18,6 +19,8 @@ func _ready():
 
 func _physics_process(delta: float) -> void:
 	_handle_movement(delta)
+	if Input.is_action_just_pressed("ui_accept"):
+		_check_for_interactables()
 
 func _handle_movement(delta: float) -> void:
 	var dir_x = 0
@@ -34,3 +37,9 @@ func _handle_movement(delta: float) -> void:
 	
 	if is_on_floor():
 		velocity.y = 0
+
+func _check_for_interactables() -> void:
+	var interactables = interactable_detector.get_overlapping_areas()
+	for interactable in interactables:
+		if interactable is Interactable:
+			interactable.interact()
