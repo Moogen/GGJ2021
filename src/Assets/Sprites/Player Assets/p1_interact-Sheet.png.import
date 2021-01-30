@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/p1_jump-Sheet.png-c54d8791534a169099f46c95cd79299e.stex"
+path="res://.import/p1_interact-Sheet.png-44548670398a925997a55687a167ddb3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Player Assets/p1_jump-Sheet.png"
-dest_files=[ "res://.import/p1_jump-Sheet.png-c54d8791534a169099f46c95cd79299e.stex" ]
+source_file="res://Assets/Sprites/Player Assets/p1_interact-Sheet.png"
+dest_files=[ "res://.import/p1_interact-Sheet.png-44548670398a925997a55687a167ddb3.stex" ]
 
 [params]
 
