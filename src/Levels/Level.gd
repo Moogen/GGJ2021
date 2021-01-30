@@ -9,7 +9,7 @@ func _ready():
 
 func set_color(color: int):
 	#TODO: Modify background color
-	#TODO: Modify interactability and sprites of children
+	#Modify interactability and sprites of children
 	for child in get_children(): #should look at all "maps" on level
 		if child.has_method("update_color"): #catch any colored objects on level level
 			child.update_color(color)
