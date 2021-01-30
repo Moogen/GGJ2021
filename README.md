@@ -36,6 +36,19 @@ git push
 - In Github, navigate to your branch and submit a pull request. Write a description if you wish
 - Ping @here in the #updates Discord channel to notify people there is an active PR
 - Someone will merge it; go get some coffee or work on something else in the meantime
+- After the PR is accepted, delete the branch both in Github and locally by running the following:
+
+```bash
+# Github branch deletion can either be done in the Github UI or from your terminal
+git push -d origin [your branch name here]
+
+# Pull the changes locally and delete the branch
+git checkout main
+git pull
+git branch -d [your branch name here]
+```
+
+- Go back to step 1 and work on something else :sunglasses:
 
 ## Collaborators
 
