@@ -35,7 +35,8 @@ git push
 
 - In Github, navigate to your branch and submit a pull request. Write a description if you wish
 - Ping @here in the #updates Discord channel to notify people there is an active PR
-- Someone will merge it; go get some coffee or work on something else in the meantime
+- _All_ PRs require at least one reviewer/accepter before they can be merged
+- Go get some coffee or work on something else in the meantime
 - After the PR is accepted, delete the branch both in Github and locally by running the following:
 
 ```bash
