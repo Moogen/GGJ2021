@@ -16,6 +16,9 @@ func _ready():
 	gravity = 2 * jump_height / pow(time_to_jump_apex, 2)
 	jump_force = gravity * time_to_jump_apex
 	pass # Replace with function body.
+	
+func kill() -> void:
+	print("player ded")
 
 func _physics_process(delta: float) -> void:
 	_handle_movement(delta)
