@@ -7,6 +7,8 @@ export var time_to_jump_apex: float = 0.4
 onready var graphics: Node2D = $Graphics
 onready var interactable_detector: Area2D = $InteractableDetector
 
+class_name Player
+
 var gravity = 0 
 var jump_force = 0
 var velocity := Vector2()
