@@ -13,15 +13,21 @@ _global_script_classes=[ {
 "class": "Interactable",
 "language": "GDScript",
 "path": "res://Interactables/Interactable.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "Player",
+"language": "GDScript",
+"path": "res://Characters/Player/Player.gd"
 } ]
 _global_script_class_icons={
-"Interactable": ""
+"Interactable": "",
+"Player": ""
 }
 
 [application]
 
 config/name="GGJ2021"
-run/main_scene="res://Levels/Sandbox/Sandbox.tscn"
+run/main_scene="res://Game.tscn"
 config/icon="res://icon.png"
 
 [rendering]
