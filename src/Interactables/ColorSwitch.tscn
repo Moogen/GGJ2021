@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Interactables/ColorSwitch.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Sprites/Art Assets/Interactables/color_switch.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Sprites/Art Assets/Interactables/color_switch_inactive.png" type="Texture" id=3]
+[ext_resource path="res://Assets/SFX/color_switch.wav" type="AudioStream" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 8, 8 )
@@ -34,3 +35,6 @@ hframes = 3
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 8, -8 )
 shape = SubResource( 1 )
+
+[node name="SwitchSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )

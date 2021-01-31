@@ -51,6 +51,7 @@ func set_gravity(orientation: int) -> void:
 	jump_force = orientation * gravity * time_to_jump_apex
 
 func kill() -> void:
+	$DeathSFX.play()
 	emit_signal("died")
 	
 func play_enter_door() -> void:
@@ -100,6 +101,7 @@ func _handle_movement(delta: float) -> void:
 		dir_x += 1
 	if Input.is_action_pressed(input_dict["up"]) && is_on_floor:
 		velocity.y = -jump_force
+		$JumpSFX.play()
 	
 	velocity.x = dir_x * speed
 	velocity.y += gravity * delta
