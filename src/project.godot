@@ -40,7 +40,6 @@ config/icon="res://icon.png"
 
 window/size/width=480
 window/size/height=270
-window/size/fullscreen=true
 window/stretch/mode="2d"
 window/stretch/aspect="keep_width"
 
@@ -177,6 +176,7 @@ ui_p2_interact={
 2d_physics/layer_1="player"
 2d_physics/layer_2="wall"
 2d_physics/layer_3="interactable"
+2d_physics/layer_4="crate"
 
 [rendering]
 

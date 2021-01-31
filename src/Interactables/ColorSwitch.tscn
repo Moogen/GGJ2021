@@ -8,6 +8,7 @@
 extents = Vector2( 8, 8 )
 
 [node name="ColorSwitch" type="Area2D" groups=[
+"colorful",
 "interactables",
 ]]
 z_index = 5

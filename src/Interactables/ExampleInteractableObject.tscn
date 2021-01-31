@@ -8,6 +8,7 @@
 extents = Vector2( 24, 24 )
 
 [node name="ExampleInteractableObj" type="Area2D" groups=[
+"colorful",
 "interactables",
 ]]
 modulate = Color( 0.47451, 0.839216, 1, 1 )
