@@ -31,14 +31,12 @@ func flip_gravity() -> void:
 	gravity *= -1
 
 func _on_PlayerDetector_body_entered(body: Node2D):
-	print("%s detected player enter" % name)
 	if can_be_pushed:
 		is_being_pushed = true
 	dir_x = sign(global_position.x - body.global_position.x)
 	pass # Replace with function body.
 
 func _on_PlayerDetector_body_exited(body: Node2D):
-	print("%s detected player exit" % name)
 	is_being_pushed = false
 	pass # Replace with function body.
 	
@@ -46,7 +44,6 @@ func _on_CrateDetector_body_entered(body: Node2D):
 	if body == self:
 		return
 		
-	print("%s detected crate enter" % name)
 	if can_be_pushed && !is_being_pushed:
 		is_being_pushed = true
 		dir_x = sign(global_position.x - body.global_position.x)
@@ -55,7 +52,6 @@ func _on_CrateDetector_body_entered(body: Node2D):
 func _on_CrateDetector_body_exited(body: Node2D):
 	if body == self:
 		return
-	print("%s detected crate exit" % name)
 	is_being_pushed = false
 	pass # Replace with function body.
 
