@@ -1,11 +1,11 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Environment/BackgroundTiles.gd" type="Script" id=1]
-[ext_resource path="res://Assets/Sprites/Art Assets/Environment/wall texture1.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Sprites/Art Assets/Environment/wall texture2.png" type="Texture" id=2]
 
 [sub_resource type="TileSet" id=1]
 0/name = "wall texture1.png 0"
-0/texture = ExtResource( 3 )
+0/texture = ExtResource( 2 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 0, 0, 96, 48 )
@@ -27,6 +27,7 @@
 0/z_index = 0
 
 [node name="BackgroundTiles" type="TileMap"]
+z_index = -5
 tile_set = SubResource( 1 )
 cell_size = Vector2( 16, 16 )
 format = 1

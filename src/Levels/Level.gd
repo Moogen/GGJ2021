@@ -4,25 +4,21 @@ class_name Level
 
 enum LevelColor {RED, GREEN, BLUE}
 
-export(LevelColor) var color setget set_color
+var color: int = 0
 
 onready var background_tiles: TileMap = $BackgroundTiles
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	set_color(background_tiles.color)
 	pass # Replace with function body.
 
 
 func set_color(color: int):
-	#TODO: Modify background color
-	#Modify interactability and sprites of children
-	for child in get_children(): #should look at all "maps" on level
-		if child.has_method("update_color"): #catch any colored objects on level level
-			child.update_color(color)
-		for sub_child in child.find_node("Interactables"): #find interactables node within the map
-			if sub_child.has_method("update_color"): sub_child.update_color(color)
-		for sub_child in child.find_node("Environment"):
-			if sub_child.has_method("update_color"): sub_child.update_color(color)
+	background_tiles.set_color(color)
+	var interactables = get_tree().get_nodes_in_group("interactables")
+	for interactable in interactables:
+		interactable.update_color(color)
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

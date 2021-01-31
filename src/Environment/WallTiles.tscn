@@ -189,6 +189,6 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 [node name="WallTiles" type="TileMap"]
 tile_set = SubResource( 17 )
 cell_size = Vector2( 16, 16 )
-collision_layer = 0
-collision_mask = 2
+collision_layer = 2
+collision_mask = 0
 format = 1

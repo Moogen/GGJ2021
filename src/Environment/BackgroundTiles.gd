@@ -1,4 +1,7 @@
+tool
 extends TileMap
+
+export(Level.LevelColor) var color setget set_color
 
 var blue_texture: Texture = preload("res://Assets/Sprites/Art Assets/Environment/wall texture1.png")
 var green_texture: Texture = preload("res://Assets/Sprites/Art Assets/Environment/wall texture2.png")
@@ -11,7 +14,8 @@ var curr_texture: Texture = blue_texture
 func _ready():
 	pass # Replace with function body.
 		
-func set_color(color: int) -> void:
+func set_color(col: int) -> void:
+	color = col
 	if color == Level.LevelColor.BLUE:
 		curr_texture = blue_texture
 	elif color == Level.LevelColor.GREEN:
