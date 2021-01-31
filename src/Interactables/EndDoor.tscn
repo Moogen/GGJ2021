@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 16, 16 )
 
-[node name="EndDoor" type="Area2D"]
+[node name="EndDoor1" type="Area2D"]
 collision_layer = 4
 script = ExtResource( 2 )
 door_state = 1

@@ -10,6 +10,7 @@ extents = Vector2( 8, 8 )
 [node name="GravitySwitch" type="Area2D" groups=[
 "colorful",
 ]]
+position = Vector2( 8, -8 )
 collision_layer = 4
 script = ExtResource( 3 )
 player = null
