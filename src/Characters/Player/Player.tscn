@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 24, 24 )
+extents = Vector2( 9.67225, 16.4376 )
 
 [node name="Player" type="KinematicBody2D" groups=[
 "player",
@@ -28,7 +28,6 @@ position = Vector2( -0.280617, 0 )
 shape = SubResource( 1 )
 
 [node name="InteractableDetector" type="Area2D" parent="."]
-visible = false
 z_index = 50
 collision_layer = 0
 collision_mask = 4

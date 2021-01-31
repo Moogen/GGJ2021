@@ -43,6 +43,7 @@ window/size/height=270
 window/size/fullscreen=true
 window/stretch/mode="2d"
 window/stretch/aspect="keep_width"
+
 [importer_defaults]
 
 texture={
@@ -179,5 +180,4 @@ ui_p2_interact={
 
 [rendering]
 
-environment/default_environment="res://default_env.tres"
-environment/default_environment="res://Singletons/default_env.tres" 
+environment/default_environment="res://Singletons/default_env.tres"
