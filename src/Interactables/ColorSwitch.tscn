@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Interactables/ColorSwitch.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Sprites/Art Assets/Interactables/color_switch.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Sprites/Art Assets/Interactables/color_switch_inactive.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 8, 8 )
@@ -17,6 +18,13 @@ script = ExtResource( 1 )
 "interactable",
 ]]
 texture = ExtResource( 2 )
+hframes = 3
+
+[node name="SpriteInactive" type="Sprite" parent="." groups=[
+"Interactable",
+]]
+visible = false
+texture = ExtResource( 3 )
 hframes = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
