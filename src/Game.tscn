@@ -17,7 +17,7 @@ position = Vector2( 176, 304 )
 [node name="Map1" type="Node" parent="Level1"]
 
 [node name="Player" parent="Level1/Map1" instance=ExtResource( 2 )]
-position = Vector2( 48, 272 )
+position = Vector2( 40, 144 )
 
 [node name="Walls" type="StaticBody2D" parent="Level1/Map1"]
 position = Vector2( 176, 304 )
@@ -47,7 +47,7 @@ script = ExtResource( 3 )
 [node name="Map2" type="Node" parent="Level1"]
 
 [node name="Player" parent="Level1/Map2" instance=ExtResource( 2 )]
-position = Vector2( 296, 272 )
+position = Vector2( 312, 144 )
 
 [node name="Walls" type="StaticBody2D" parent="Level1/Map2"]
 position = Vector2( 176, 304 )
