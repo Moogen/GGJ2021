@@ -66,10 +66,10 @@ position = Vector2( 303.934, 191.973 )
 [node name="Spikes" parent="." instance=ExtResource( 8 )]
 position = Vector2( 224, 199.973 )
 
-[node name="EndDoor" parent="." instance=ExtResource( 9 )]
+[node name="EndDoor1" parent="." instance=ExtResource( 9 )]
 position = Vector2( 408, 192 )
-OtherDoor = NodePath(".")
+OtherDoor = NodePath("../EndDoor2")
 
 [node name="EndDoor2" parent="." instance=ExtResource( 9 )]
 position = Vector2( 40, 192 )
-OtherDoor = NodePath(".")
+OtherDoor = NodePath("../EndDoor1")

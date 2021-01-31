@@ -15,7 +15,7 @@ var levels = [
 
 var curr_level_index = 0
 var is_loading_level = false
-
+signal go_through_door
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -48,6 +48,9 @@ func _handle_level_load():
 		level.queue_free()
 	level = load(levels[curr_level_index]).instance()
 	level.connect("player_died", self, "restart_level")
+	if level.has_node("EndDoor1") and level.has_node("EndDoor2"):
+		level.get_node("EndDoor1").connect("go_through_door",self, "load_next_level")
+		level.get_node("EndDoor2").connect("go_through_door",self, "load_next_level")
 	viewport1.add_child(level)
 	camera1.target = level.get_node("Player1")
 	camera2.target = level.get_node("Player2")
