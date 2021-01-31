@@ -171,6 +171,12 @@ ui_p2_interact={
  ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="player"
+2d_physics/layer_2="wall"
+2d_physics/layer_3="interactable"
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"
