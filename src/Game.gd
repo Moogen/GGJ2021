@@ -9,7 +9,8 @@ onready var level: Node = null
 
 var levels = [
 	"res://Levels/Sandbox/Sandbox.tscn",
-	"res://Levels/Sandbox/Sandbox2.tscn"
+	"res://Levels/Sandbox/Sandbox2.tscn",
+	"res://Levels/Level1.tscn"
 ]
 
 var curr_level_index = 0
