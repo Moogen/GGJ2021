@@ -177,3 +177,4 @@ ui_p2_jump={
 [rendering]
 
 environment/default_environment="res://default_env.tres"
+environment/default_environment="res://Singletons/default_env.tres"
