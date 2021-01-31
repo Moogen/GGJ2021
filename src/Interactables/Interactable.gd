@@ -3,17 +3,12 @@ extends Area2D
 # Treat this as an abstract class, interactables should extend from this
 class_name Interactable
 
-#Button_colors{
-#	none = 0
-#	blue = 1
-#	red = 2
-#	green =3
-#}
-	
-var sprite: Node2D = null
-export var my_color = 0
-export var is_interactable = false
+export(Level.LevelColor) var color setget set_color
+
 var outline_shader: ShaderMaterial = preload("res://Resources/outline.tres")
+var sprite: Node2D = null
+
+var is_interactable = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -40,19 +35,22 @@ func interact():
 		print("could not interact with %s" % name)
 
 func _on_area_entered(area: Area2D) -> void:
-	sprite.material = outline_shader
-	pass
+	if is_interactable:
+		sprite.material = outline_shader
 
 func _on_area_exited(area: Area2D) -> void:
 	sprite.material = null
-	pass
 
-func update_color(color: int) -> void:
-	#DO NOT update mycolor. We're updating the sprite and behavior here
-	#TODO: Update sprite
-	#TODO: Set interactability
-	if color == my_color:
+func update_color(background_color: int) -> void:
+	if background_color == color:
 		is_interactable = false
+		sprite.material = null
 	else:
 		is_interactable = true
 	
+# This function is only called in the editor
+func set_color(col: int) -> void:
+	color = col
+	if has_node("Sprite"):
+		var sprite: Sprite = get_node("Sprite")
+		get_node("Sprite").frame = color % sprite.hframes
