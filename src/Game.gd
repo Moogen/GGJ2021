@@ -8,6 +8,7 @@ onready var camera2 = $HBoxContainer/ViewportContainer2/Viewport2/Camera2
 onready var level: Node = null
 
 var levels = [
+	"res://Levels/Level2.tscn",
 	"res://Levels/Level1.tscn",
 	"res://Levels/Sandbox/Sandbox.tscn",
 	"res://Levels/Sandbox/Sandbox2.tscn"

@@ -51,7 +51,7 @@ margin_top = 204.0
 margin_right = 110.0
 margin_bottom = 234.0
 icon = ExtResource( 2 )
-next_scene = "res://Levels/Level1.tscn"
+next_scene = "res://Game.tscn"
 
 [node name="Credits Button" parent="HSplitContainer/HSplitContainer/VBoxContainer" instance=ExtResource( 4 )]
 margin_top = 238.0
