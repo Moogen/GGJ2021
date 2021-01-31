@@ -72,14 +72,14 @@ OtherDoor = NodePath("../EndDoor1")
 position = Vector2( 40, -40 )
 color = 3
 
-[node name="EndDoor1" parent="Spikes" instance=ExtResource( 5 )]
-position = Vector2( 24, -8 )
-door_state = 2
-
-[node name="EndDoor2" parent="Spikes" instance=ExtResource( 5 )]
-position = Vector2( 392, -8 )
-door_state = 2
-
 [node name="Spikes2" parent="." instance=ExtResource( 10 )]
 position = Vector2( 456, -40 )
 color = 3
+
+[node name="EndDoor3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 64, -48 )
+door_state = 2
+
+[node name="EndDoor4" parent="." instance=ExtResource( 5 )]
+position = Vector2( 432, -48 )
+door_state = 2

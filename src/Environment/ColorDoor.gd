@@ -10,6 +10,7 @@ func _ready():
 		assert(false, "Please add a collider to the obstacle")
 	_check_for_sprite()
 
+
 func update_color(background_color: int) -> void:
 	if background_color == color:
 		collider.set_deferred("disabled", true)
@@ -23,6 +24,3 @@ func update_color(background_color: int) -> void:
 			get_node("SpriteInactive").visible = false
 			sprite.visible = true
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass

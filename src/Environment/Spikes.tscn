@@ -23,5 +23,5 @@ hframes = 3
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
 visible = false
-polygon = PoolVector2Array( -8, 8, -8, 0, 0, -8, 8, 0, 8, 8 )
+polygon = PoolVector2Array( -8, 8, -8, 8, 0, 0, 8, 8, 8, 8 )
 [connection signal="body_entered" from="." to="." method="_on_Spikes_body_entered"]
