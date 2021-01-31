@@ -1,6 +1,9 @@
 extends KinematicBody2D
 
 enum PlayerNumber {One, Two}
+
+signal died
+
 export(PlayerNumber) var player_num
 
 export var speed: float = 256
@@ -48,7 +51,7 @@ func set_gravity(orientation: int) -> void:
 	jump_force = orientation * gravity * time_to_jump_apex
 
 func kill() -> void:
-	get_tree().reload_current_scene()
+	emit_signal("died")
 
 """
 Lifecycle Methods
