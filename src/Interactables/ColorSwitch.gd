@@ -7,7 +7,7 @@ func _ready():
 
 func interact(): 
 	if is_interactable:
-		var level: Level = get_tree().current_scene
+		var level: Level = get_parent()
 		level.set_color(color)
 		if has_node("SpriteInactive"):
 			get_node("SpriteInactive").visible = true
