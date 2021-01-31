@@ -1,22 +1,20 @@
-extends Area2D
+extends Interactable
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
+func update_color(background_color: int) -> void:
+	if background_color == color:
+		is_interactable=false
+		if has_node("SpriteInactive"):
+			get_node("SpriteInactive").visible = true
+			sprite.visible = false
+		sprite.material = null 
+	else:
+		is_interactable=true
+		if has_node("SpriteInactive"):
+			get_node("SpriteInactive").visible = false
+			sprite.visible = true
 
 func _on_Spikes_body_entered(body: Node2D):
-	if body.has_method("kill"):
-		body.kill()
+	if is_interactable:
+		if body.has_method("kill"):
+			body.kill()
 	pass # Replace with function body.

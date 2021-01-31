@@ -19,7 +19,7 @@ func set_color(color: int):
 	var interactables = get_tree().get_nodes_in_group("interactables")
 	for interactable in interactables:
 		interactable.update_color(color)
+	var obstacles = get_tree().get_nodes_in_group("obstacles")
+	for obstacle in obstacles:
+		obstacle.update_color(color)
 	
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
