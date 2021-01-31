@@ -26,7 +26,6 @@ color = 1
 
 [node name="ExampleInteractableObj" parent="." instance=ExtResource( 3 )]
 position = Vector2( 728, 392 )
-color = 2
 
 [node name="Spikes" parent="." instance=ExtResource( 4 )]
 position = Vector2( 584, 456 )
@@ -36,4 +35,4 @@ position = Vector2( 528, 456 )
 
 [node name="ColorSwitch2" parent="." instance=ExtResource( 7 )]
 position = Vector2( 760, 456 )
-color = 2
+color = 1
