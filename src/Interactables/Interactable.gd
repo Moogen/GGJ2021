@@ -3,8 +3,6 @@ extends Area2D
 # Treat this as an abstract class, interactables should extend from this
 class_name Interactable
 
-export(Level.LevelColor) var color
-
 #Button_colors{
 #	none = 0
 #	blue = 1
