@@ -52,6 +52,10 @@ func set_gravity(orientation: int) -> void:
 
 func kill() -> void:
 	emit_signal("died")
+	
+func play_enter_door() -> void:
+	set_physics_process(false)
+	animated_sprite.play("door_enter")
 
 """
 Lifecycle Methods
