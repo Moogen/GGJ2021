@@ -6,9 +6,9 @@ signal died
 
 export(PlayerNumber) var player_num
 
-export var speed: float = 256
-export var jump_height: float = 128
-export var time_to_jump_apex: float = 0.4
+export var speed: float = 128
+export var jump_height: float = 32
+export var time_to_jump_apex: float = 0.3
 
 onready var animated_sprite: AnimatedSprite = $Graphics/AnimatedSprite
 onready var graphics: Node2D = $Graphics

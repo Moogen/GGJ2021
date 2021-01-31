@@ -14,7 +14,7 @@ onready var background_tiles: TileMap = $BackgroundTiles
 func _ready():
 	get_node("Player1").connect("died", self, "_on_player_died")
 	get_node("Player2").connect("died", self, "_on_player_died")
-	set_color(background_tiles.color)
+	set_color(background_tiles.color) 
 	pass # Replace with function body.
 
 

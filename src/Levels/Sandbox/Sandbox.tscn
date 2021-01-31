@@ -14,10 +14,10 @@
 script = ExtResource( 5 )
 
 [node name="Player1" parent="." instance=ExtResource( 1 )]
-position = Vector2( 88, 184 )
+position = Vector2( 80, 192 )
 
 [node name="Player2" parent="." instance=ExtResource( 1 )]
-position = Vector2( 360, 168 )
+position = Vector2( 376, 192 )
 player_num = 1
 
 [node name="BackgroundTiles" parent="." instance=ExtResource( 6 )]
@@ -36,13 +36,13 @@ position = Vector2( 104, 24 )
 
 [node name="GravitySwitch" parent="." instance=ExtResource( 4 )]
 position = Vector2( 216, 168 )
-player = NodePath("../../Level/Player")
-crates_group = NodePath("../../Level/Crates_1")
+player = NodePath("../Player2")
+crates_group = NodePath("../Crates_2")
 
 [node name="GravitySwitch3" parent="." instance=ExtResource( 4 )]
 position = Vector2( 72, 176 )
 color = 1
-player = NodePath("../../Level/Player2")
+player = NodePath("../Player2")
 crates_group = NodePath("../../Level/Crates_2")
 
 [node name="Crates_1" type="Node2D" parent="."]
