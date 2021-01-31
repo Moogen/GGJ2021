@@ -33,7 +33,6 @@ color = 2
 
 [node name="ColorSwitch" parent="." instance=ExtResource( 7 )]
 position = Vector2( 104, 24 )
-color = 0
 
 [node name="GravitySwitch" parent="." instance=ExtResource( 4 )]
 position = Vector2( 216, 168 )

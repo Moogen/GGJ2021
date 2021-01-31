@@ -19,6 +19,7 @@ extents = Vector2( 10.1339, 2.08592 )
 [node name="Crate" type="KinematicBody2D" groups=[
 "colorful",
 ]]
+position = Vector2( 0, 2.8533e+07 )
 collision_layer = 8
 collision_mask = 10
 script = ExtResource( 1 )

@@ -15,7 +15,6 @@ func _ready():
 	connect("area_entered", self, "_on_area_entered")
 	connect("area_exited", self, "_on_area_exited")
 	_check_for_sprite()
-	pass # Replace with function body.
 	
 func _check_for_sprite() -> void:
 	if has_node("Sprite"):
