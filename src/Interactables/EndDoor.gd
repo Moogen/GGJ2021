@@ -25,8 +25,9 @@ func _ready():
 			connect("area_exited", get_node(OtherDoor), "_close")
 	
 func interact():
-	if(isOpen and get_node(OtherDoor)):
-		emit_signal("go_through_door")
+	if(isOpen and get_node(OtherDoor).isOpen):
+		if get_tree().has_method("load_next_level"):
+			get_tree().load_next_level()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
@@ -42,11 +43,11 @@ func _close():
 		var sprite: Sprite = get_node("Sprite")
 		sprite.frame +=1
 
-func _on_Area2D_area_entered(area):
+func _on_Area2D_area_entered(area) -> void:
 	emit_signal("open_door")
 
 
-func _on_Area2D_area_exited(area):
+func _on_Area2D_area_exited(area) -> void:
 	emit_signal("close_door")
 	
 func set_state(state: int) -> void:
