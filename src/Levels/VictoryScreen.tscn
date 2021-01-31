@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://GUI/MenuButton.tscn" type="PackedScene" id=1]
-[ext_resource path="res://GUI/p2p_victory_placeholder.png" type="Texture" id=2]
+[ext_resource path="res://GUI/p2p_victory.png" type="Texture" id=2]
 [ext_resource path="res://GUI/QuitListener.gd" type="Script" id=3]
 
 [node name="Main Menu" type="MarginContainer"]
@@ -13,27 +13,27 @@ __meta__ = {
 }
 
 [node name="Background" type="TextureRect" parent="."]
-margin_right = 494.0
-margin_bottom = 280.0
+margin_right = 480.0
+margin_bottom = 270.0
 texture = ExtResource( 2 )
 
 [node name="HSplitContainer" type="HSplitContainer" parent="."]
-margin_right = 494.0
-margin_bottom = 280.0
+margin_right = 480.0
+margin_bottom = 270.0
 
 [node name="Left Padding" type="Control" parent="HSplitContainer"]
-margin_right = 290.0
-margin_bottom = 280.0
-rect_min_size = Vector2( 290, 0 )
+margin_right = 280.0
+margin_bottom = 270.0
+rect_min_size = Vector2( 280, 0 )
 
 [node name="HSplitContainer" type="HSplitContainer" parent="HSplitContainer"]
-margin_left = 302.0
-margin_right = 494.0
-margin_bottom = 280.0
+margin_left = 292.0
+margin_right = 480.0
+margin_bottom = 270.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HSplitContainer/HSplitContainer"]
 margin_right = 150.0
-margin_bottom = 280.0
+margin_bottom = 270.0
 rect_min_size = Vector2( 98, 50 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -41,17 +41,17 @@ __meta__ = {
 
 [node name="Top Padding" type="Control" parent="HSplitContainer/HSplitContainer/VBoxContainer"]
 margin_right = 150.0
-margin_bottom = 240.0
-rect_min_size = Vector2( 0, 240 )
+margin_bottom = 235.0
+rect_min_size = Vector2( 0, 235 )
 
 [node name="Play Again Button" parent="HSplitContainer/HSplitContainer/VBoxContainer" instance=ExtResource( 1 )]
-margin_top = 244.0
+margin_top = 239.0
 margin_right = 150.0
-margin_bottom = 274.0
+margin_bottom = 269.0
 rect_min_size = Vector2( 150, 30 )
-next_scene = "res://Levels/Level1.tscn"
+next_scene = "res://Game.tscn"
 
 [node name="Right Padding" type="Control" parent="HSplitContainer/HSplitContainer"]
 margin_left = 162.0
-margin_right = 192.0
-margin_bottom = 280.0
+margin_right = 188.0
+margin_bottom = 270.0

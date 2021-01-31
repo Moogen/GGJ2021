@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/p2p_victory_placeholder.png-922a65dcc87dec276850ecaefbd69020.stex"
+path="res://.import/p2p_victory.png-5d1335c9a4538a640aa5206c80aa0203.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://GUI/p2p_victory_placeholder.png"
-dest_files=[ "res://.import/p2p_victory_placeholder.png-922a65dcc87dec276850ecaefbd69020.stex" ]
+source_file="res://GUI/p2p_victory.png"
+dest_files=[ "res://.import/p2p_victory.png-5d1335c9a4538a640aa5206c80aa0203.stex" ]
 
 [params]
 
