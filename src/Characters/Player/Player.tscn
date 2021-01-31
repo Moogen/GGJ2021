@@ -18,11 +18,15 @@ script = ExtResource( 2 )
 
 [node name="Graphics" type="Node2D" parent="."]
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="Graphics"]
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Graphics" groups=[
+"player",
+]]
 position = Vector2( 0.0701523, 0 )
 scale = Vector2( 1.00585, 1 )
 frames = ExtResource( 1 )
-animation = "idle"
+animation = "door_enter"
+frame = 5
+playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 1 )
