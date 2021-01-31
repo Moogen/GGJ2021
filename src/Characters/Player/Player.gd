@@ -70,6 +70,7 @@ func _handle_animation(delta: float) -> void:
 		animated_sprite.play("run")
 
 func kill() -> void:
+	get_tree().reload_current_scene()
 	print("player ded")
 	print("oh no orz :(")
 
