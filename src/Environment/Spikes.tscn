@@ -5,7 +5,7 @@
 [ext_resource path="res://Assets/Sprites/Art Assets/Environment/ColorSpikes.png" type="Texture" id=3]
 
 [node name="Spikes" type="Area2D" groups=[
-"obstacles",
+"colorful",
 ]]
 collision_layer = 0
 script = ExtResource( 1 )

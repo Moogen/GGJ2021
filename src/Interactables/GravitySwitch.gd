@@ -21,9 +21,11 @@ func interact():
 	#TODO: also change the sprite for the flip of the lever
 	
 func _flip_gravity() -> void:
-	get_node(player).flip_gravity()
-	for crate in get_node(crates_group).get_children():
-		crate.flip_gravity()
+	if player != null:
+		get_node(player).flip_gravity()
+	if crates_group != null:
+		for crate in get_node(crates_group).get_children():
+			crate.flip_gravity()
 	if on:
 		sprite.frame = (sprite.frame + sprite.hframes) % (sprite.hframes * sprite.vframes)
 		
