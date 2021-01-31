@@ -1,0 +1,55 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://GUI/MenuButton.tscn" type="PackedScene" id=1]
+[ext_resource path="res://GUI/QuitListener.gd" type="Script" id=2]
+[ext_resource path="res://GUI/p2p_creditscreen.png" type="Texture" id=4]
+
+[node name="Main Menu" type="MarginContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="TextureRect" parent="."]
+margin_right = 480.0
+margin_bottom = 270.0
+texture = ExtResource( 4 )
+
+[node name="HSplitContainer" type="HSplitContainer" parent="."]
+margin_right = 480.0
+margin_bottom = 270.0
+
+[node name="Left Padding" type="Control" parent="HSplitContainer"]
+margin_right = 170.0
+margin_bottom = 270.0
+rect_min_size = Vector2( 170, 0 )
+
+[node name="HSplitContainer" type="HSplitContainer" parent="HSplitContainer"]
+margin_left = 182.0
+margin_right = 480.0
+margin_bottom = 270.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HSplitContainer/HSplitContainer"]
+margin_right = 98.0
+margin_bottom = 270.0
+rect_min_size = Vector2( 98, 50 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Top Padding" type="Control" parent="HSplitContainer/HSplitContainer/VBoxContainer"]
+margin_right = 98.0
+margin_bottom = 235.0
+rect_min_size = Vector2( 0, 235 )
+
+[node name="Back Button" parent="HSplitContainer/HSplitContainer/VBoxContainer" instance=ExtResource( 1 )]
+margin_top = 239.0
+margin_bottom = 259.0
+next_scene = "res://Levels/StartMenu.tscn"
+
+[node name="Right Padding" type="Control" parent="HSplitContainer/HSplitContainer"]
+margin_left = 110.0
+margin_right = 298.0
+margin_bottom = 270.0
