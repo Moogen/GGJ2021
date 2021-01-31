@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://GUI/MenuButton.tscn" type="PackedScene" id=1]
+[ext_resource path="res://GUI/QuitListener.gd" type="Script" id=2]
 [ext_resource path="res://GUI/p2p_creditscreen.png" type="Texture" id=4]
 
 [node name="Main Menu" type="MarginContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -44,7 +46,7 @@ rect_min_size = Vector2( 0, 235 )
 
 [node name="Back Button" parent="HSplitContainer/HSplitContainer/VBoxContainer" instance=ExtResource( 1 )]
 margin_top = 239.0
-margin_bottom = 269.0
+margin_bottom = 259.0
 next_scene = "res://Levels/StartMenu.tscn"
 
 [node name="Right Padding" type="Control" parent="HSplitContainer/HSplitContainer"]
