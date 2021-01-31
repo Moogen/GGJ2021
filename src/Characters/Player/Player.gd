@@ -82,10 +82,10 @@ func _check_for_interactables() -> void:
 func _init_player_config() -> void:
 	var sprite_frames
 	if player_num == PlayerNumber.One:
-		sprite_frames = load("Characters/Player/Player1_Spriteframes.tres")
+		sprite_frames = load("res://Characters/Player/Player1_Spriteframe.tres")
 		input_dict = input_dict_player_1
 	elif player_num == PlayerNumber.Two:
-		sprite_frames = load("Characters/Player/Player2_Spriteframes.tres")
+		sprite_frames = load("res://Characters/Player/Player2_Spriteframe.tres")
 		input_dict = input_dict_player_2
 	animated_sprite.frames = sprite_frames
 	# The following line is probably unnecessary?
