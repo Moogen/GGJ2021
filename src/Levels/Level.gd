@@ -2,7 +2,7 @@ extends Node
 
 class_name Level
 
-enum LevelColor {RED, GREEN, BLUE}
+enum LevelColor {RED, GREEN, BLUE, BLACK}
 
 var color: int = 0
 
@@ -16,10 +16,8 @@ func _ready():
 
 func set_color(color: int):
 	background_tiles.set_color(color)
-	var interactables = get_tree().get_nodes_in_group("interactables")
+	var interactables = get_tree().get_nodes_in_group("colorful")
 	for interactable in interactables:
-		interactable.update_color(color)
-	var obstacles = get_tree().get_nodes_in_group("obstacles")
-	for obstacle in obstacles:
-		obstacle.update_color(color)
+		if interactable.has_method("update_color"):
+			interactable.update_color(color)
 	

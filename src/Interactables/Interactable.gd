@@ -6,7 +6,7 @@ class_name Interactable
 export(Level.LevelColor) var color setget set_color
 
 var outline_shader: ShaderMaterial = preload("res://Resources/outline.tres")
-var sprite: Node2D = null
+var sprite: Sprite = null
 
 var is_interactable = true
 
@@ -20,8 +20,6 @@ func _ready():
 func _check_for_sprite() -> void:
 	if has_node("Sprite"):
 		sprite = get_node("Sprite")
-	elif has_node("AnimatedSprite"):
-		sprite = get_node("AnimatedSprite")
 	else:
 		assert(false, "Please add a sprite to the interactable")
 	
@@ -42,12 +40,15 @@ func _on_area_exited(area: Area2D) -> void:
 	sprite.material = null
 
 func update_color(background_color: int) -> void:
+	if color == Level.LevelColor.BLACK:
+		return
+		
 	if background_color == color:
 		is_interactable = false
+		sprite.material = null
 		if has_node("SpriteInactive"):
 			get_node("SpriteInactive").visible = true
 			sprite.visible = false
-		sprite.material = null 
 	else:
 		is_interactable = true
 		if has_node("SpriteInactive"):
@@ -59,5 +60,7 @@ func set_color(col: int) -> void:
 	color = col
 	if has_node("Sprite"):
 		var sprite: Sprite = get_node("Sprite")
-		get_node("Sprite").frame = color % (sprite.hframes*sprite.vframes)
-		
+		sprite.frame = color % sprite.hframes
+	if has_node("SpriteInactive"):
+		var sprite: Sprite = get_node("SpriteInactive")
+		sprite.frame = color % sprite.hframes

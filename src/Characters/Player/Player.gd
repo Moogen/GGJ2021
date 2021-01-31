@@ -38,6 +38,11 @@ const input_dict_player_2 = {
 """
 Public Methods
 """
+func flip_gravity() -> void:
+	gravity *= -1
+	jump_force *= -1
+	animated_sprite.flip_v = gravity < 0
+	
 func set_gravity(orientation: int) -> void:
 	gravity = orientation * 2 * jump_height / pow(time_to_jump_apex, 2)
 	jump_force = orientation * gravity * time_to_jump_apex
@@ -75,13 +80,14 @@ func _init_player_config() -> void:
 	animated_sprite.play("idle")
 	
 func _handle_movement(delta: float) -> void:
+	var is_on_floor = (gravity > 0 && is_on_floor()) || (gravity < 0 && is_on_ceiling())
 	# TODO: need to handle up and down for climbing
 	var dir_x = 0
 	if Input.is_action_pressed(input_dict["left"]):
 		dir_x -= 1
 	if Input.is_action_pressed(input_dict["right"]):
 		dir_x += 1
-	if Input.is_action_pressed(input_dict["up"]) && is_on_floor():
+	if Input.is_action_pressed(input_dict["up"]) && is_on_floor:
 		velocity.y = -jump_force
 	
 	velocity.x = dir_x * speed
