@@ -41,7 +41,7 @@ color = 3
 player = NodePath("../Player1")
 
 [node name="GravitySwitch2" parent="." instance=ExtResource( 9 )]
-position = Vector2( 446.876, -96.6423 )
+position = Vector2( 443.092, -108.415 )
 color = 3
 player = NodePath("../Player2")
 
