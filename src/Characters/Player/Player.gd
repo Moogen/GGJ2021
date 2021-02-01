@@ -52,6 +52,9 @@ func set_gravity(orientation: int) -> void:
 
 func kill() -> void:
 	$DeathSFX.play()
+	$DeathParticles.emitting = true
+	animated_sprite.visible = false
+	set_physics_process(false)
 	emit_signal("died")
 	
 func play_enter_door() -> void:

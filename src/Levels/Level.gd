@@ -12,6 +12,7 @@ var color: int = 0
 onready var background_tiles: TileMap = $BackgroundTiles
 
 var player_entered_door = false
+var did_player_die = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -36,6 +37,10 @@ func set_color(color: int):
 			interactable.update_color(color)
 
 func _on_player_died() -> void:
+	if did_player_die:
+		return
+	did_player_die = true
+	yield(get_tree().create_timer(1.5), "timeout")
 	emit_signal("player_died")
 
 func _on_door_entered() -> void:
