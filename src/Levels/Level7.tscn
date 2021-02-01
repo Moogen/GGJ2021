@@ -17,10 +17,10 @@
 script = ExtResource( 3 )
 
 [node name="Player1" parent="." instance=ExtResource( 2 )]
-position = Vector2( 1399.58, 188.786 )
+position = Vector2( 64, -36.8 )
 
 [node name="Player2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 1371.85, 170.245 )
+position = Vector2( 24, 208 )
 player_num = 1
 
 [node name="BackgroundTiles" parent="." instance=ExtResource( 1 )]

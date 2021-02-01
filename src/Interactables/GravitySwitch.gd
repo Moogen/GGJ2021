@@ -28,7 +28,8 @@ func _flip_gravity() -> void:
 			crate.flip_gravity()
 	if on:
 		sprite.frame = (sprite.frame + sprite.hframes) % (sprite.hframes * sprite.vframes)
-		
+	$OnSFX.play()
+	
 func update_color(background_color: int) -> void:
 	if color == Level.LevelColor.BLACK:
 		return

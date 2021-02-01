@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/8bit ggj jam.ogg-627bd3cb823338ba55c806defef5bf9e.oggstr"
+
+[deps]
+
+source_file="res://Assets/Music/8bit ggj jam.ogg"
+dest_files=[ "res://.import/8bit ggj jam.ogg-627bd3cb823338ba55c806defef5bf9e.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -36,6 +36,10 @@ config/name="GGJ2021"
 run/main_scene="res://Levels/StartMenu.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+MusicPlayer="*res://Singletons/MusicPlayer.tscn"
+
 [display]
 
 window/size/width=480

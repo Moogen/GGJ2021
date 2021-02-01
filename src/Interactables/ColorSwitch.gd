@@ -7,6 +7,7 @@ func _ready():
 
 func interact(): 
 	if is_interactable:
+		$SwitchSFX.play()
 		var level: Level = get_parent()
 		level.set_color(color)
 		if has_node("SpriteInactive"):
