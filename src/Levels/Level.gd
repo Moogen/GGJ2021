@@ -10,7 +10,6 @@ enum LevelColor {RED, GREEN, BLUE, BLACK}
 var color: int = 0
 
 onready var background_tiles: TileMap = $BackgroundTiles
-onready var art_tiles: TileMap = $ArtTiles
 
 var player_entered_door = false
 
@@ -26,8 +25,11 @@ func _ready():
 
 func set_color(color: int):
 	background_tiles.set_color(color)
-	if art_tiles != null:
+	
+	if has_node("ArtTiles"):
+		var art_tiles = get_node("ArtTiles")
 		art_tiles.set_color(color)
+	
 	var interactables = get_tree().get_nodes_in_group("colorful")
 	for interactable in interactables:
 		if interactable.has_method("update_color"):
