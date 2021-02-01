@@ -24,8 +24,8 @@ script = ExtResource( 2 )
 position = Vector2( 0.0701523, 0 )
 scale = Vector2( 1.00585, 1 )
 frames = ExtResource( 1 )
-animation = "door_enter"
-frame = 5
+animation = "victory"
+frame = 31
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

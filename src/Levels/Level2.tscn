@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Characters/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Environment/WallTiles.tscn" type="PackedScene" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://Levels/Level.gd" type="Script" id=6]
 [ext_resource path="res://Interactables/EndDoor.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Environment/Spikes.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Environment/ColorPlatform.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Interactables/FinalDoor.tscn" type="PackedScene" id=11]
 
 [node name="Level" type="Node"]
 script = ExtResource( 6 )
@@ -50,16 +52,274 @@ position = Vector2( 336, 0 )
 OtherDoor = NodePath("../EndDoor2")
 
 [node name="EndDoor2" parent="." instance=ExtResource( 8 )]
-position = Vector2( 336, 80 )
+position = Vector2( 16, -32 )
 OtherDoor = NodePath("../EndDoor1")
-
-[node name="EndDoor3" parent="." instance=ExtResource( 8 )]
-position = Vector2( 16, 80 )
 door_state = 2
 
-[node name="EndDoor4" parent="." instance=ExtResource( 8 )]
-position = Vector2( 16, 0 )
-door_state = 2
+[node name="ColorDoors" parent="." instance=ExtResource( 7 )]
+position = Vector2( 152, -200 )
+color = 1
 
-[node name="ColorSwitch" parent="." instance=ExtResource( 4 )]
-position = Vector2( 184, 80 )
+[node name="ColorDoors10" parent="." instance=ExtResource( 7 )]
+position = Vector2( 632, -96 )
+
+[node name="ColorDoors11" parent="." instance=ExtResource( 7 )]
+position = Vector2( 688, -96 )
+color = 2
+
+[node name="ColorDoors12" parent="." instance=ExtResource( 7 )]
+position = Vector2( 744, -96 )
+color = 2
+
+[node name="ColorDoors16" parent="." instance=ExtResource( 7 )]
+position = Vector2( 848, -104 )
+color = 1
+
+[node name="ColorDoors2" parent="." instance=ExtResource( 10 )]
+position = Vector2( 368, -208 )
+color = 1
+
+[node name="ColorDoors3" parent="." instance=ExtResource( 10 )]
+position = Vector2( 272, -160 )
+color = 1
+
+[node name="ColorDoors6" parent="." instance=ExtResource( 10 )]
+position = Vector2( 320, -128 )
+color = 1
+
+[node name="ColorDoors7" parent="." instance=ExtResource( 10 )]
+position = Vector2( 576, -128 )
+color = 2
+
+[node name="ColorDoors8" parent="." instance=ExtResource( 10 )]
+position = Vector2( 688, -128 )
+color = 2
+
+[node name="ColorDoors9" parent="." instance=ExtResource( 10 )]
+position = Vector2( 632, -128 )
+
+[node name="ColorDoors13" parent="." instance=ExtResource( 10 )]
+position = Vector2( 576, -48 )
+color = 2
+
+[node name="ColorDoors14" parent="." instance=ExtResource( 10 )]
+position = Vector2( 688, -48 )
+color = 2
+
+[node name="ColorDoors15" parent="." instance=ExtResource( 10 )]
+position = Vector2( 632, -48 )
+
+[node name="ColorDoors4" parent="." instance=ExtResource( 10 )]
+position = Vector2( 320, -184 )
+
+[node name="ColorDoors5" parent="." instance=ExtResource( 10 )]
+position = Vector2( 224, -136 )
+
+[node name="Spikes13" parent="." instance=ExtResource( 9 )]
+position = Vector2( 184, -24 )
+color = 3
+
+[node name="Spikes14" parent="." instance=ExtResource( 9 )]
+position = Vector2( 200, -24 )
+color = 3
+
+[node name="Spikes15" parent="." instance=ExtResource( 9 )]
+position = Vector2( 216, -24 )
+color = 3
+
+[node name="Spikes16" parent="." instance=ExtResource( 9 )]
+position = Vector2( 232, -24 )
+color = 3
+
+[node name="Spikes17" parent="." instance=ExtResource( 9 )]
+position = Vector2( 248, -24 )
+color = 3
+
+[node name="Spikes18" parent="." instance=ExtResource( 9 )]
+position = Vector2( 264, -24 )
+color = 3
+
+[node name="Spikes19" parent="." instance=ExtResource( 9 )]
+position = Vector2( 280, -24 )
+color = 3
+
+[node name="Spikes20" parent="." instance=ExtResource( 9 )]
+position = Vector2( 296, -24 )
+color = 3
+
+[node name="Spikes21" parent="." instance=ExtResource( 9 )]
+position = Vector2( 312, -24 )
+color = 3
+
+[node name="Spikes22" parent="." instance=ExtResource( 9 )]
+position = Vector2( 328, -24 )
+color = 3
+
+[node name="Spikes23" parent="." instance=ExtResource( 9 )]
+position = Vector2( 344, -24 )
+color = 3
+
+[node name="Spikes24" parent="." instance=ExtResource( 9 )]
+position = Vector2( 360, -24 )
+color = 3
+
+[node name="Spikes25" parent="." instance=ExtResource( 9 )]
+position = Vector2( 376, -24 )
+color = 3
+
+[node name="Spikes26" parent="." instance=ExtResource( 9 )]
+position = Vector2( 392, -24 )
+color = 3
+
+[node name="Spikes27" parent="." instance=ExtResource( 9 )]
+position = Vector2( 408, -24 )
+color = 3
+
+[node name="Spikes46" parent="." instance=ExtResource( 9 )]
+position = Vector2( 184, 216 )
+color = 3
+
+[node name="Spikes47" parent="." instance=ExtResource( 9 )]
+position = Vector2( 200, 216 )
+color = 3
+
+[node name="Spikes48" parent="." instance=ExtResource( 9 )]
+position = Vector2( 216, 216 )
+color = 3
+
+[node name="Spikes49" parent="." instance=ExtResource( 9 )]
+position = Vector2( 232, 216 )
+color = 3
+
+[node name="Spikes50" parent="." instance=ExtResource( 9 )]
+position = Vector2( 248, 216 )
+color = 3
+
+[node name="Spikes51" parent="." instance=ExtResource( 9 )]
+position = Vector2( 264, 216 )
+color = 3
+
+[node name="Spikes52" parent="." instance=ExtResource( 9 )]
+position = Vector2( 280, 216 )
+color = 3
+
+[node name="Spikes53" parent="." instance=ExtResource( 9 )]
+position = Vector2( 296, 216 )
+color = 3
+
+[node name="Spikes54" parent="." instance=ExtResource( 9 )]
+position = Vector2( 312, 216 )
+color = 3
+
+[node name="Spikes55" parent="." instance=ExtResource( 9 )]
+position = Vector2( 328, 216 )
+color = 3
+
+[node name="Spikes56" parent="." instance=ExtResource( 9 )]
+position = Vector2( 344, 216 )
+color = 3
+
+[node name="Spikes60" parent="." instance=ExtResource( 9 )]
+position = Vector2( 248, 24 )
+rotation = 3.14159
+color = 3
+
+[node name="Spikes61" parent="." instance=ExtResource( 9 )]
+position = Vector2( 264, 24 )
+rotation = 3.14159
+color = 3
+
+[node name="Spikes62" parent="." instance=ExtResource( 9 )]
+position = Vector2( 280, 24 )
+rotation = 3.14159
+color = 3
+
+[node name="Spikes63" parent="." instance=ExtResource( 9 )]
+position = Vector2( 296, 24 )
+rotation = 3.14159
+color = 3
+
+[node name="Spikes64" parent="." instance=ExtResource( 9 )]
+position = Vector2( 312, 24 )
+rotation = 3.14159
+color = 3
+
+[node name="Spikes65" parent="." instance=ExtResource( 9 )]
+position = Vector2( 328, 24 )
+rotation = 3.14159
+color = 3
+
+[node name="Spikes66" parent="." instance=ExtResource( 9 )]
+position = Vector2( 344, 24 )
+rotation = 3.14159
+color = 3
+
+[node name="Spikes67" parent="." instance=ExtResource( 9 )]
+position = Vector2( 360, 24 )
+rotation = 3.14159
+color = 3
+
+[node name="Spikes68" parent="." instance=ExtResource( 9 )]
+position = Vector2( 376, 24 )
+rotation = 3.14159
+color = 3
+
+[node name="Spikes69" parent="." instance=ExtResource( 9 )]
+position = Vector2( 392, 24 )
+rotation = 3.14159
+color = 3
+
+[node name="ColorSwitch5" parent="." instance=ExtResource( 4 )]
+position = Vector2( 672.94, 49 )
+
+[node name="ColorSwitch7" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1112, -120 )
+
+[node name="ColorSwitch15" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1336, -200 )
+
+[node name="ColorSwitch16" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1364.14, -200 )
+color = 2
+
+[node name="ColorSwitch13" parent="." instance=ExtResource( 4 )]
+position = Vector2( 984, -192 )
+
+[node name="ColorSwitch8" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1112, -39.2 )
+color = 1
+
+[node name="ColorSwitch9" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1232, -36.8 )
+color = 1
+
+[node name="ColorSwitch6" parent="." instance=ExtResource( 4 )]
+position = Vector2( 904, 120 )
+
+[node name="ColorSwitch14" parent="." instance=ExtResource( 4 )]
+position = Vector2( 871.055, 120 )
+color = 2
+
+[node name="ColorSwitch10" parent="." instance=ExtResource( 4 )]
+position = Vector2( 720, 120 )
+color = 1
+
+[node name="ColorSwitch12" parent="." instance=ExtResource( 4 )]
+position = Vector2( 792, 40 )
+color = 2
+
+[node name="ColorSwitch11" parent="." instance=ExtResource( 4 )]
+position = Vector2( 672.94, 200 )
+color = 2
+
+[node name="ColorDoors17" parent="." instance=ExtResource( 10 )]
+position = Vector2( 1248, 208 )
+
+[node name="ColorDoors18" parent="." instance=ExtResource( 10 )]
+position = Vector2( 1248, 128 )
+
+[node name="FinalDoor" parent="." instance=ExtResource( 11 )]
+position = Vector2( 1456, 208 )
+door_state = 1
+player1 = NodePath("../Player1")
+player2 = NodePath("../Player2")

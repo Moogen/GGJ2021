@@ -22,7 +22,7 @@ func _ready():
 	_check_for_sprite()
 	if has_node("Sprite"):
 		var sprite: Sprite = get_node("Sprite")
-		if sprite.frame != 2: #start door
+		if sprite.frame != 2 and OtherDoor != "": #start door
 			connect("open_door", get_node(OtherDoor), "_open")
 			connect("close_door", get_node(OtherDoor), "_close")
 	
@@ -40,7 +40,8 @@ func _open():
 	isOpen = true
 	if has_node("Sprite"):
 		var sprite: Sprite = get_node("Sprite")
-		sprite.frame -=1
+		if sprite.frame > 0:
+			sprite.frame -=1
 	
 func _close():
 	isOpen = false
@@ -57,7 +58,8 @@ func _on_EndDoor_body_entered(body):
 	player = body
 	if isOpen:
 		_position_player_to_door()
-		get_node(OtherDoor)._position_player_to_door()
+		if OtherDoor != "":
+			get_node(OtherDoor)._position_player_to_door()
 		emit_signal("go_through_door")
 	
 func _on_EndDoor_body_exited(body):

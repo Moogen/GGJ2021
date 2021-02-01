@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/p2p_victory_placeholder.png-922a65dcc87dec276850ecaefbd69020.stex"
+path="res://.import/endcutscene-Sheet.png-6551bca6175bde630d42265de3590a53.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://GUI/p2p_victory_placeholder.png"
-dest_files=[ "res://.import/p2p_victory_placeholder.png-922a65dcc87dec276850ecaefbd69020.stex" ]
+source_file="res://Assets/Sprites/Player Assets/endcutscene-Sheet.png"
+dest_files=[ "res://.import/endcutscene-Sheet.png-6551bca6175bde630d42265de3590a53.stex" ]
 
 [params]
 
