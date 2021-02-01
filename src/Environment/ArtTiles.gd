@@ -3,9 +3,9 @@ extends TileMap
 
 export(Level.LevelColor) var color setget set_color
 
-var blue_texture: Texture = preload("res://Assets/Sprites/Art Assets/Environment/wall texture1.png")
-var green_texture: Texture = preload("res://Assets/Sprites/Art Assets/Environment/wall texture2.png")
-var red_texture: Texture = preload("res://Assets/Sprites/Art Assets/Environment/wall texture3.png")
+var blue_texture: Texture = preload("res://Assets/Sprites/Art Assets/Environment/wall_texture5.png")
+var green_texture: Texture = preload("res://Assets/Sprites/Art Assets/Environment/wall_texture6.png")
+var red_texture: Texture = preload("res://Assets/Sprites/Art Assets/Environment/wall_texture7.png")
 
 var curr_texture: Texture = blue_texture
 
