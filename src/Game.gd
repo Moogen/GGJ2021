@@ -13,9 +13,9 @@ var levels = [
 	"res://Levels/Level3.tscn",
 	"res://Levels/Level4.tscn",
 	"res://Levels/Level7.tscn",
-	"res://Levels/Sandbox/Sandbox.tscn",
-	"res://Levels/Sandbox/Sandbox2.tscn"
-	
+	"res://Levels/VictoryScreen.tscn"
+	# "res://Levels/Sandbox/Sandbox.tscn",
+	# "res://Levels/Sandbox/Sandbox2.tscn"
 ]
 
 var curr_level_index = 0
