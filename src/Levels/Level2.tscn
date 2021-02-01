@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Characters/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Environment/WallTiles.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Interactables/EndDoor.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Environment/Spikes.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Environment/ColorPlatform.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Interactables/FinalDoor.tscn" type="PackedScene" id=11]
 
 [node name="Level" type="Node"]
 script = ExtResource( 6 )
@@ -358,6 +359,7 @@ door_state = 2
 
 [node name="EndDoor2" parent="." instance=ExtResource( 8 )]
 position = Vector2( 16, -32 )
+OtherDoor = NodePath("../EndDoor1")
 door_state = 2
 
 [node name="ColorDoors" parent="." instance=ExtResource( 7 )]
@@ -622,10 +624,8 @@ position = Vector2( 1248, 208 )
 [node name="ColorDoors18" parent="." instance=ExtResource( 10 )]
 position = Vector2( 1248, 128 )
 
-[node name="EndDoor3" parent="." instance=ExtResource( 8 )]
+[node name="FinalDoor" parent="." instance=ExtResource( 11 )]
 position = Vector2( 1456, 208 )
-OtherDoor = NodePath("../EndDoor4")
-
-[node name="EndDoor4" parent="." instance=ExtResource( 8 )]
-position = Vector2( 1456, 208 )
-OtherDoor = NodePath("../EndDoor3")
+door_state = 1
+player1 = NodePath("../Player1")
+player2 = NodePath("../Player2")

@@ -56,6 +56,10 @@ func kill() -> void:
 func play_enter_door() -> void:
 	set_physics_process(false)
 	animated_sprite.play("door_enter")
+	
+func win_game() -> void:
+	set_physics_process(false)
+	animated_sprite.play("victory")
 
 """
 Lifecycle Methods
