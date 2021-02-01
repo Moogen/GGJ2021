@@ -41,12 +41,13 @@ __meta__ = {
 
 [node name="Top Padding" type="Control" parent="HSplitContainer/HSplitContainer/VBoxContainer"]
 margin_right = 98.0
-margin_bottom = 235.0
-rect_min_size = Vector2( 0, 235 )
+margin_bottom = 220.0
+rect_min_size = Vector2( 0, 220 )
 
 [node name="Back Button" parent="HSplitContainer/HSplitContainer/VBoxContainer" instance=ExtResource( 1 )]
-margin_top = 239.0
-margin_bottom = 259.0
+margin_top = 224.0
+margin_bottom = 254.0
+rect_min_size = Vector2( 0, 30 )
 next_scene = "res://Levels/StartMenu.tscn"
 
 [node name="Right Padding" type="Control" parent="HSplitContainer/HSplitContainer"]
